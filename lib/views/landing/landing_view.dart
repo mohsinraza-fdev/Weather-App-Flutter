@@ -7,7 +7,9 @@ import 'package:hackathon/shared/styles.dart';
 import 'package:hackathon/viewmodels/landing_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
+import 'components/current_location_button.dart';
 import 'components/header_text.dart';
+import 'components/select_city_button.dart';
 
 class LandingView extends StatelessWidget {
   const LandingView({Key? key}) : super(key: key);
@@ -33,6 +35,13 @@ class LandingView extends StatelessWidget {
                 const SizedBox(height: 68),
                 const HeaderText(),
                 const Spacer(),
+                CurrentLocationButton(
+                  onTap: () => viewModel.useCurrentLocation(),
+                ),
+                const SizedBox(height: 18),
+                SelectCityButton(
+                  onTap: () {},
+                ),
                 const SizedBox(height: 53),
               ],
             ),

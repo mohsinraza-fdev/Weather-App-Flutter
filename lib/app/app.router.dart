@@ -12,13 +12,16 @@ import 'package:stacked/stacked_annotations.dart';
 
 import '../views/landing/landing_view.dart';
 import '../views/splash/splash_view.dart';
+import '../views/weather/weather_view.dart';
 
 class Routes {
   static const String splashView = '/';
   static const String landingView = '/landing-view';
+  static const String weatherView = '/weather-view';
   static const all = <String>{
     splashView,
     landingView,
+    weatherView,
   };
 }
 
@@ -28,6 +31,7 @@ class StackedRouter extends RouterBase {
   final _routes = <RouteDef>[
     RouteDef(Routes.splashView, page: SplashView),
     RouteDef(Routes.landingView, page: LandingView),
+    RouteDef(Routes.weatherView, page: WeatherView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -41,6 +45,12 @@ class StackedRouter extends RouterBase {
     LandingView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const LandingView(),
+        settings: data,
+      );
+    },
+    WeatherView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const WeatherView(),
         settings: data,
       );
     },

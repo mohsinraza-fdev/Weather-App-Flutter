@@ -20,7 +20,7 @@ class HeaderText extends StatelessWidget {
             ),
             children: <TextSpan>[
               TextSpan(
-                  text: "Let's set your\n",
+                  text: "Let's set you\n",
                   style: heading1.copyWith(
                     color: appGreyColor,
                     height: 63.5 / 57,

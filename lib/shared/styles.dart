@@ -7,6 +7,8 @@ const Color appBlackColor = Color(0xFF000000);
 const Color appPrimaryColor = Color(0xFF6DC9EF);
 const Color appSecondaryColor = Color(0xFF1D1D1D);
 const Color appGreyColor = Color(0xFFBFBFBF);
+const Color appGrey1 = Color(0xFFE0E0E0);
+const Color appGrey2 = Color(0xFFF1F1F1);
 
 // Text Styles
 TextStyle paragraph1 = GoogleFonts.poppins(
