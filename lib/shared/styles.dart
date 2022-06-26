@@ -10,6 +10,8 @@ const Color appGreyColor = Color(0xFFBFBFBF);
 const Color appGrey1 = Color(0xFFE0E0E0);
 const Color appGrey2 = Color(0xFFF1F1F1);
 const Color appGrey3 = Color(0xFF5F5F5F);
+const Color appGrey4 = Color(0xFFA8A8A8);
+const Color appGrey5 = Color(0xFFF7F7F7);
 
 // Text Styles
 TextStyle paragraph1 = GoogleFonts.poppins(

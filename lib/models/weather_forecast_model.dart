@@ -80,7 +80,7 @@ class Current {
   double? tempC;
   Condition? condition;
   int? cloud;
-  int? uv;
+  double? uv;
 
   Current({this.tempC, this.condition, this.cloud, this.uv});
 

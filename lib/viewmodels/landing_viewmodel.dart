@@ -15,5 +15,7 @@ class LandingViewModel extends BaseViewModel {
     setBusy(false);
   }
 
-  void navigateToCitySelectionPage() {}
+  void navigateToCitySelectionPage() {
+    _navigator.navigateTo(Routes.citySelectionView);
+  }
 }

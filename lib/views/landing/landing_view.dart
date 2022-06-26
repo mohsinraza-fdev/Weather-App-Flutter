@@ -16,7 +16,7 @@ class LandingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<LandingViewModel>.nonReactive(
+    return ViewModelBuilder<LandingViewModel>.reactive(
       viewModelBuilder: () => LandingViewModel(),
       builder: (context, viewModel, child) => Scaffold(
         backgroundColor: appBackgroundColor,
@@ -44,7 +44,7 @@ class LandingView extends StatelessWidget {
                       ),
                       const SizedBox(height: 18),
                       SelectCityButton(
-                        onTap: () {},
+                        onTap: () => viewModel.navigateToCitySelectionPage(),
                       ),
                       const SizedBox(height: 53),
                     ],
