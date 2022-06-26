@@ -20,33 +20,37 @@ class LandingView extends StatelessWidget {
       viewModelBuilder: () => LandingViewModel(),
       builder: (context, viewModel, child) => Scaffold(
         backgroundColor: appBackgroundColor,
-        body: Stack(
-          children: [
-            Positioned(
-              top: 261.5,
-              child: Image.asset(
-                AssetConstants.appLandingPageImage,
-                width: screenWidth(context),
+        body: viewModel.isBusy
+            ? const Center(
+                child: CircularProgressIndicator(color: appPrimaryColor),
+              )
+            : Stack(
+                children: [
+                  Positioned(
+                    top: 261.5,
+                    child: Image.asset(
+                      AssetConstants.appLandingPageImage,
+                      width: screenWidth(context),
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 68),
+                      const HeaderText(),
+                      const Spacer(),
+                      CurrentLocationButton(
+                        onTap: () => viewModel.useCurrentLocation(),
+                      ),
+                      const SizedBox(height: 18),
+                      SelectCityButton(
+                        onTap: () {},
+                      ),
+                      const SizedBox(height: 53),
+                    ],
+                  ),
+                ],
               ),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 68),
-                const HeaderText(),
-                const Spacer(),
-                CurrentLocationButton(
-                  onTap: () => viewModel.useCurrentLocation(),
-                ),
-                const SizedBox(height: 18),
-                SelectCityButton(
-                  onTap: () {},
-                ),
-                const SizedBox(height: 53),
-              ],
-            ),
-          ],
-        ),
       ),
     );
   }

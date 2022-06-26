@@ -9,7 +9,11 @@ class LandingViewModel extends BaseViewModel {
   final _weatherService = locator<WeatherService>();
 
   Future<void> useCurrentLocation() async {
+    setBusy(true);
     await _weatherService.updateLocation(null);
     _navigator.navigateTo(Routes.weatherView);
+    setBusy(false);
   }
+
+  void navigateToCitySelectionPage() {}
 }
