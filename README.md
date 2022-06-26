@@ -4,7 +4,7 @@ Hackathon TechIdara
 
 ## Profile
 
-Name: Mohsin Raza\n
-Roll no: 12964\n
+Name: Mohsin Raza <br />
+Roll no: 12964 <br />
 Enrollment no: 4015/01-22
 
